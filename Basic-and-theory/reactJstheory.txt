@@ -1,0 +1,14 @@
+->react->language nhi hai,framework nhi hai ,technology nhi hai 
+->react ek JS library hai  
+
+->facebook ne 2013 ne banayi aur 2015 open source kar di 
+
+->React me hme padhna kya hai Virtual DOM ;
+jab bhi aap website pe kuch phi badalte ho , wo to badalti hi hai but aap jo nhi badalte wo bhi repaint hota hai jabki inme koi  change nhi hua hai to ye hota hai ek long in-efficent process ,to ye ek badi problem thi real dom ke sath 
+
+->Dom re-render hota hai changes hone pe 
+
+->jab website pe khoob saare changes hote hai to khoob sara repaint hota hai wo bhi wo element jo badle bhi nhi to ye website to slow kar deta hai ,to iss cheez se bhi bachne ke liye facebook ne react creation kiya ..
+
+->So, for this facebook created Virtual DOM ab ye janab kya hote hai 
+->V-Dom:- matalb agar aap ek cheez change kar rhe ho to sirf vhi change hogi yani ki  repaint(re-render) hogi ,baaki ki saari cheeje same rhegi.

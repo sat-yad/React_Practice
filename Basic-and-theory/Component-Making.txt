@@ -1,0 +1,15 @@
+Components,states,props
+
+// react kya hai Components ka mela hai
+
+
+_-----------------------------------Conditional-Rendering-----------------------------
+
+-< koi conition lagake ke cheeze render krna jaisi ki maan lo koi ecommerce website ha hai aur koi product khatam ho gay ato aapko show krn ahai ki ye product khatam hi chuka hai ,to aap udhar conditional rendering ka use kar skte ho 
+
+------------------------------------ Handling Event -----------------------------------
+
+->ek function bana ke udhar hi paas kar do , are bhiaya udhar ki kidhar pass kar du matlab jaha classname kilhte ho naah udhar hi likh do accha theek bhaiya smjh gaya 
+->accha dikhne ke liye return ke pehlle bhi ek function bana skte ho aur directly eventhandler call ke under use call bhi kr skte ho   
+
+

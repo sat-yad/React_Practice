@@ -1,0 +1,81 @@
+----------------------Node modules----------------------------------------
+-> jo chize behind the scene react ko chahiye;
+-> hme public se lena dena hai src se lena dena hai 
+
+--------------------------Public-------------------------------------
+-> jo bhi aapke static assets(imgaes ,videos, etc.. aapko rakhni hai ) jo aapko idhar rkhne ho
+
+------------------------------------src---------------------------------
+-> isme hai main materials ,sab kuch isme rkh skte hai static assets bhi rkh skte ho aur hum isi me rakhege
+
+
+---------------------------------JSX------------------------------------------
+->jsx is actually a very simpler looking structure like HTML but with super-powers
+->jsx sirf dikhta hai html ki tarah but hota hia nhi
+
+<h1>xyz</h1> but ye dikhta hai h1 jaisa but ye  convert hota hai react.createelement me 
+
+->jsx me calculations ho skte hai curly bracktes ke ander jaise ki 
+
+agar html me likhe <h1> hii  2+2 </h1> to o/p dega hii 2+2
+but agar yhi cheez agar jsx selikhe to kaise likh skte hai <h1> hii {2+2}</h1> ,to isak output hii 4 aayega
+
+
+--------------------------------What is Component-------------------------
+Component ek single piece hota hai jisko aap bhut baar repeat karoge kyi baar code me 
+->Component ka kaam hai kuch jsx return krna 
+->aisa koi bhi function jo jsx return kr rha hai wo jsx hai  and what are these Component caaled they are called as functional Component;
+->another type of Component is called static Component jo ki baad me sikhege koi ab hum sab kuch functionl Component ki help se krte hai 
+
+-> accha bhaiya Component to smjh gy ekya hota hai ,but ab isko banayege kaise 
+theek hai banana bhi sikha dete hai 
+
+let say :-
+
+import React from "react"; // achcha ye kis liye krte hai kyuki hum React.createelement me convert krta hai jsx me to wo seatrch nhi kar payega React kya hota hai  
+achha fir bhaiya ky akein import kara liya jo bhi use krna hai 
+uske baad ek function banao jo ki tumhara functional compenent ki tarah kaam karta hai acgha bhaiya aapne to kaaha tha ki static compenent bhi horte hai wo kya hote hai wo baad me smjhege .
+
+import React from "react"
+function abcd(){
+  return {
+    <h1> jo bhi return karanaa hai  wo likh do</h1>
+  }
+}
+
+export default app;
+
+accha bbhaiya ye aapne exporty kyu kiya :- kyuki agar hme maan lo iss functional copmpent ko use karna ho uske ke liye ise export karata ehai.
+
+
+
+----------------------------------about src structure-----------------------------
+-------src folder
+       ---->Component folder(iske ander saare compenent rehte hai)
+       ---->app.jsx file (isme saare compenent ko use krta hai hai tu)
+       ---->assets folder(isme images ,video,etc rakta hai jo bhi project me use ho)
+       ---->main.jsx file(isme hum jo hamari app.jsx file hoti hai usko body tag ke ander daalte hai) 
+
+
+
+-------------------------------------App.js file----------------------------------
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+
+ab iske ander kya kya hota hai wo discuss krte hai:-
+-> dekho idhar hme App.jsx file ko import kar liya ,
+ab ye ReactDOM kya likha hai ,yhi cheez VirtualDom create krti hai ,aur ye root kya likha hai ,ye root ko select kr rha hia index.html wali file se ,render matlab show kr do kaha root , pe kya show kro jo bhi app me hai kaha krna hai root ke ander
+
+
+
+
+

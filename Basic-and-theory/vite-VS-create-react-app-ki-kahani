@@ -1,0 +1,4 @@
+-> pehle to jo react ke apps bante the wo bante the craete react app se ,ab react app setup krne ke liye hme kaafi code likhne hote hai react app ko setup krne ke liye
+-> ab fb ne kya kiya ,nayi appraoch pe jayege react app create krne ke liye ,to unhone nextjs ko mix kiya ,ab kayi saare logo next js nhi chahiye kyuki unhe sirf frontend banana hai with the help of create-react app;
+
+-> to create react to ab react raha nhi kyuki usme next js bagerah mix kr di to uske liye hum raw create react app use kar paye vite hai ..

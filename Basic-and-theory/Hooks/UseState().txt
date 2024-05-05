@@ -1,0 +1,61 @@
+-?state ek data hota hai ,react is data ka khyaal rkta hia ,jab bhi ye data change hota hai to react page to update karta hai
+
+->state koi bhi data ho skta hai jaisi ki score=0
+ useState(0) aise likhte hai ,lekin bhaiya ye to hmne likha hai naah bhaiya,
+ achha chalo smjhte hai 
+
+->maan lo  ki aapne likha 0 aur maan lo ye update hoke 1 ho gya to ab react ko pata nhi chalega naah ki ye update hua hai ki nhi ,to react ko pata lag jaye iske liye hum use state ka use krta hai ,usestate(0) ,agar maan lo ye change bhi hota hai , usestate(1) to react is change ko update akr dega
+
+->maan lete hai aapke game me aapka sciore bydefault zero se start hota hai and future me ye score by the factor of 10 ,aur aapko page pe showe karna hai jab ye core increase ho to, us case me ye score variable ek state  main rkhna jarurri hai ,kyuki react use change hai jo state me hota hai .
+
+to ab jab usestate ko store krte hai to :
+const ans=useState(0)
+ans[0]=value;
+ans[1]=function // jo value ko update krta hai to hum isko destructuring se achhe se likh skte hai , kaise bhaiya zara dikaho karke 
+wo aise :- const [score,setScore]=useState(0)
+
+theek bhaiya score wali cheez ko ek dum clear ho gyi butu ab aap ye setScore wali cheez smjha do smjh nhi aa rhi 
+-------------------------------------setState--------------------------------
+-> ye smjhne ke liye chalo ek question deta hu tumhe :- maan lo jab tum button par click karo to score by 100 increase ho jaye 
+
+to agar hum :-
+import React, { useState } from "react";
+
+function Card() {
+  const [state, setState] = useState(100);
+  return (
+    <div className="p-4">
+      <h1 className="px-3"> {state}</h1>
+      <button
+        onClick={() => setState(200)}
+        className="px-3 py-2 bg-blue-600 text-xs rounded-md mt-3"
+      >
+        Score
+      </button>
+    </div>
+  );
+}
+
+export default Card;
+
+-----------------------------------------------------------------------------------------
+
+-------------------------------useState() Intermediate--------------------------------
+
+->how to change value inside the useState fucntion this can be done event listner but u have to pass it in the function :-
+
+jaisi ki maan click karne pe values chaneg ho jaye to kya karege ;-
+to hum ek event -listner ban lege onClick vala :-
+to hum uske ander ek dunction return karaye j ki hamaar setVal wala function hoga 
+accha theek hai bhaiya :_ tum jab setval paas karoge to uske ander bhi fucntion bhi return kara skte ho actually b
+
+ <div  onClick=(()=>setVal(()=>()))className=""> </div>
+
+
+
+
+ ---------------------------------------------Advanced-----------------------------------
+ ->usestate state to turant update nhi krta ,wo useState state to update larta hai apne hissab se fucntion completion ke baad, to fix performance issues 
+
+ -> array deletion,addition,etc  filter aur map se ho jayege practice kr lena
+

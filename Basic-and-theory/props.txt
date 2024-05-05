@@ -1,0 +1,6 @@
+
+
+-> Props use hote hai aapke component ko reusable banane ke liye ,consider karo aapke paas ek button and aapko eus button alag alag jagah daalna hai, to aap ek button component banaye and uska data hard-coded krne ki jagah parent component se send kar de and child component me use kr le 
+
+
+question:- hamara data actually main component me hoga aur hum use props ke through card me pass karege card mein and har card par ek print add friend button hoga  and add friend button par click hone par alert dena hai.

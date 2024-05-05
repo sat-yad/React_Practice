@@ -1,0 +1,198 @@
+-> Array ,Objects,Destructuring,import and export 
+-> map ,filters, arrow function,spread operator
+
+------------------------------Arrays-----------------------------------
+
+Arrays->here arrays are dynamic in js
+.. aisa data structure hota hi jo ki ek se jyada element rakh skta hai 
+[1, 2, 3, 4, 5];
+[1, 2, "3", 3.5];
+-> what is immutable and MUTABLE:-
+-> react js bhi aapko state name ki cheez hoti hai us bande ko aap mutate nhi kar skte mtlb uski value directly nhi hata skte ya jod skte
+
+-> var state=[1,2,3];
+   state.pop();
+   to app aisa nhi kr skte react me because ye allowed nhi hoti
+
+-> to ab hme yhi seekhna hai ki state ko immutable way me update kaise krein
+to hum kya karege state ko ek naya array de dege use change nhi karege
+ mtlb
+ var state=[1,2,3,4],
+ state=[1,2,3] because popping to allowed nhi hai 
+ maan lo hme kaha ye state hai isme se last ki value hata do to hum opop nhi kr payege to kya kr skte hai hum us state to nhi array se intialize kara dege jasie ki state=[1,2,3]
+
+ -> to hum soch skte hai state ki value ko dusre vector ya array me store kara lo  aur usse nikaal do jaise ki:-
+  var state=[1,2,3,4,5],
+  var val=state;
+  val.pop()
+   to hme lag rha hai ki ye hum val r=array se value pop kar rhe but ye actually state wale se popping ho rhi hai to ab hum kya krein to useke liye use me aata hai Spread Operator
+
+   ----------------------------------Spread Operator ----------------------------------
+
+   to ab ye kya janab hai inka matlb yaad rkhlo simpple lang me  3 dot ...
+   to isse kya hoga ab 
+
+   var state=[1,2,3,4,5],
+   var copy=[...state],
+   copy.pop()
+
+   ab actually ye copy file copied array of state hai naa ki reference ke hissab se copy  hai ,value ke hissab se hua hai agar print kara ake bbu dekho ge to state array abhi bhi 1,2,3,4,5 hi milega aur copy array me 1,2,3,4 hi milege
+
+   to isse change kaise hua ji 
+   to change krne ke liye state =copy kr do change ho jayega ok ab smjha
+
+
+-> Maanlo lop bhaiya agar aapko ab object de rkhha to kaise karege to simple hai issi jais a same hai 
+  for eg:-  let say var state={name="satyam" ,age=20}
+  let say be want to change the age of saryam in 2024 ,previous age is of 2023 
+  then we will say that  you will go and change state.age=21
+  no but this will not work because this is not allowed in react.
+
+  so bhaiya ab kya karein:
+  what u will do u will make a state 
+  var state={name:"satyam" , age=21}
+  now u will make a copy of this object with the helpo of the spread operator 
+  var copy=[...state]
+   abb main kya karunga ,changes karunga ya updation karunga jo bhi krne ho copy wale me
+   copy.age=22;
+   state=copy;
+   now this will work ..
+
+---------------------------------Destructuring-----------------------------------------
+
+-> ye vaha use me aati hai jaha hme koi object ke arguments ko baar baar  naah kikhna pade,ok bhiya explain kro aise smjh nhi aaya
+ 
+ let say be a object with  a name of state={name:"satyam" ,age:"24"}
+ now we want to use these to argument ket say 25 time what u will do 
+ state.name,state.age ......................... go upto 25 time this will make u sometimes pagal ki baar baar likhna pad rha hai 
+ to bhaiya me to aise hi karung aaap bata kuch aaccha ho aapke pass , ha haina 
+ hum isme Destructuring ka use karege achha to bhaiya to kya toppp si cheez boldi aapne
+ var state={name:"satyam" ,age:"24"}
+ to hum kya kahege ki var {name,age} = state; use karunga 
+ isee ki hme baar stae.age nhi likhna padega
+
+
+
+ ---------------------------- import and export ------------------------------
+
+ to bhaiya ye ab import export ki kya kahani hai :- chalo smjhte hai 
+
+ jab hum koi react app banate hai to hme bhut saare components banate hote hai components kya hota hai bhaiya ,hissa maan lo components ko jab koi bhi badi cheez banate ho to use chote chote tukdo mein baat detee ho aur baad mein inhe ek add kardete ho jaisi ek maan ko ek webite me navbaar hoti hai ,cart page hota hai home page hota hai sbka landing page hota hai to inn sab ko hum components me bana lete hai ,
+ to ab inhe jodne me dikkat aatii hai last me ,kyuki yer to alaga alag hisse hai  ,to inhe jodne ke liye import or export kaam me aata hai 
+ achha mtlab kaise bhaiya aak me aata hai 
+
+ maan lo ek function cart bana rakkha hai aur ,nav baar bana rakkha hai aur ek landing  page bana rkkha ahi  to hum ek components se krte hai export and jaha main file hoti hai udhar kar lete hai inko import ,achh abhiya smjh nhi aaya ky akaha
+
+ me keh rha hu ki 
+  function Cart(){
+
+  }
+  export default Cart;
+  function LandingPage(){
+  
+  }
+  export default LandingPage;
+  function NavBar(){
+  
+  }
+  export default NavBar;
+ 
+
+ to let say ab hme inhe main file me use karn ahai to kaise karunga ,dekho idhar se to export kar diya export ka matlab hi hota hai bhejna ,import ka matlab kya hita hai use krna ya koi cheez kisi se lena to mann lo ab ye components jo export kiye hai wo hme use krne hai to udhar ipport kr lo
+
+ main.js file hai :-
+ import  Cart from "path"
+       
+---------------------------------- Arrow Function --------------------------------
+
+kuch nhi hai cool tareek ahai likhne ka industry me yhi use hota hai 
+jaise ki tu agar normal function likhega wo kaise likhte hai :
+function abcd(){
+
+}
+ab isi cheez ko tu arrow function se 
+
+const abcd=()=>{
+
+}
+aise likh skt hai :
+ab isme ek aur crux hai  maan lo agar ek hi parameter de rkkha hai to :
+jisne JS banaya hai usne kaha fat lagane ki koi jarurat nhi hai :
+  const abcd=(val)=>{
+  console.log("ab karo isko  change");
+  }
+
+   const abcd=val=>{
+    console.log("le bhai kar diya change");
+   }
+
+   -------------------------------- Implicit Return------------------------
+
+
+
+
+
+
+
+
+
+
+
+   ------------------------------------------ Map --------------------------
+   -> dono hi array pe chalte hai donon ka kaam hai array pe kuch perform krna and "ek naya array return krna"
+
+    var arr=[1,2,3,4,5];
+   -> map ka matlab har element pe kcuh karo aur naye array me rakkhohi elements naye array mein place hote hai
+
+   -> map ke ander return krne ki vajah se 
+
+   ->foreach ke ander aata hai function nad function ke ander value aati hai
+
+   const ans= arr.map(val=>{   return val*2;})      
+   const ans= arr.map(val=>(val*2))
+
+   -> state ek array hai usme numbres hai aur apkko +1 krna hai 
+   var state=[1,2,3,4,5]
+   state[0]=1+1  // we cant do it this way 
+
+   const ans= state.map(ele=>(ele+1));
+
+   -> ek array hai saare numbers jo ki 5 se bade ho unme 5 jod dena baaki numbers  waise  ke waise return karo naye array mein
+
+   var arr=[1,2,3,4,5,6,7];
+   const ans=arr.map(ele=>{
+        if(ele>5) return ele+5;
+        else return ele;
+   })
+   //or
+   const ans=arr.map(ele=>
+      ele>5?ele+5:ele;
+   )
+
+
+   ------------------------------ Filter -----------------------------------------
+
+  -> map filter me ek hi farak hai map saare bande lautata hai matlab jis array pe  map use kr rhe ho ,aur filter bando ko kam krta hai 
+
+  -> ek array mein  sabhi nums jo 5 se bade hai unme 10 add kro 
+
+  -> jab original array ki size kam naah ho udhar mao use hota hai ,
+  -> jab original array ki size kam krna ho udhar filter use hota hai ,
+  -> ek array me se saare wo numbers hata do jo ki 5 se chhote hai 
+
+  var nums=[1,3,5,7,2];
+  const ans=arr.filter(ele=>ele>4)
+
+  
+
+
+
+
+
+    
+
+
+
+
+
+
